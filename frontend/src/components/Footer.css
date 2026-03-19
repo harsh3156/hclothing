@@ -1,0 +1,105 @@
+/* src/Footer.css */
+
+.footer {
+  background-color: black; /* Navy Blue */
+  color: #FFF4EE; /* Light Peach Text */
+  padding-top: 30px;
+  width: 100%;
+  margin-top: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 30px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  width: 250px;
+  margin: 15px;
+}
+
+.footer-section h3 {
+  color: #FFB07C; /* Peach Accent for Headings */
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.footer-section p, 
+.footer-section a {
+  color: #E0E0E0;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Links List Styling */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a:hover {
+  color: #FFCBA4; /* Softer Peach on hover */
+  text-decoration: underline;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #FFB07C;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.social-icons a:hover {
+  color: #FFCBA4;
+  transform: scale(1.1);
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 203, 164, 0.3); /* Peach border line */
+  background-color: #0B132B; /* Dark Navy Bottom Bar */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #E0E0E0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    justify-content: flex-start;
+    padding: 0 10px 20px;
+  }
+
+  .footer-section {
+    width: 45%;
+    margin: 10px 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-section {
+    width: 90%;
+    margin: 10px auto;
+  }
+}

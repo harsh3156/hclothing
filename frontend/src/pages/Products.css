@@ -1,0 +1,190 @@
+/* 🌈 1. THEME COLORS — PEACH & NAVY */
+:root {
+  --primary-peach: #ffb085;
+  --primary-peach-dark: #e68a5c;
+  --primary-navy: #1b2a49;
+  --primary-navy-light: #2d3e63;
+  --background-light: #f9faff;
+  --text-primary: #1b2a49;
+  --text-secondary: #555;
+}
+
+/* 🌐 Page Layout */
+.shop-page {
+  display: flex;
+  background-color: var(--background-light);
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 🧭 Left Sidebar */
+.shop-filters {
+  width: 240px;
+  background-color: var(--primary-navy);
+  color: #fff;
+  padding: 25px 20px;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.shop-filters h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--primary-peach);
+}
+
+.shop-search-box {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* 💰 Filter Sections */
+.shop-filters h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-peach);
+  margin: 14px 0 8px;
+}
+
+.shop-filters label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #eee;
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+.shop-filters input[type="radio"] {
+  margin-right: 8px;
+  accent-color: var(--primary-peach);
+}
+
+/* 🏬 Right Product Section */
+.shop-section {
+  flex: 1;
+  padding: 30px 50px;
+}
+
+.shop-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid var(--primary-peach);
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+.shop-header-row h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+/* 🧱 Product Grid */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+/* 🧺 Product Card */
+.shop-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(27, 42, 73, 0.1);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(27, 42, 73, 0.15);
+}
+
+.shop-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* 🧡 Product Name */
+.shop-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+/* ⭐ Centered Rating Stars */
+.product-stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin: 6px 0;
+  color: var(--primary-peach);
+  font-size: 17px;
+}
+
+.product-stars .star.active {
+  color: var(--primary-peach);
+}
+
+.product-stars .star.half {
+  color: var(--primary-peach);
+  position: relative;
+}
+
+.product-stars .star {
+  color: #ddd;
+}
+
+.product-stars .rating-value {
+  font-size: 13px;
+  color: #444;
+  margin-left: 4px;
+}
+
+/* 🔸 No Rating Text */
+.no-rating {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+/* 💵 Price */
+.shop-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-peach-dark);
+  margin-top: 4px;
+}
+
+/* 🚫 No Results Message */
+.no-results-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 15px;
+  margin-top: 40px;
+}
+
+/* ⚠️ Error + Loading */
+.loading-state,
+.error-state {
+  font-size: 18px;
+  text-align: center;
+  padding: 50px;
+  color: var(--primary-navy);
+}

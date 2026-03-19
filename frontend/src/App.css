@@ -1,0 +1,140 @@
+/* src/App.css */
+
+/* --- 🌸 Global Peach & Navy Theme --- */
+:root {
+  --primary: #FF6B6B;     /* Peach Coral */
+  --secondary: #1E293B;   /* Navy Blue */
+  --background: #FFF7ED;  /* Creamy White */
+  --text: #0F172A;        /* Dark Navy */
+  --accent: #FBBF24;      /* Soft Yellow */
+}
+
+/* --- Global Styles --- */
+
+/* ⭐ FIX: Ensure html and body take full height context ⭐ */
+html, body {
+  height: 100%;
+}
+
+/* A simple CSS reset for consistent styling across browsers */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* --- Buttons --- */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent);
+  color: var(--secondary);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+}
+
+/* --- Form Elements --- */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: var(--text);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+
+/* --- Layout --- */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* --- Utility Classes --- */
+.text-center {
+  text-align: center;
+}
+
+.loading-message,
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: var(--secondary);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* --- Slick Carousel Default CSS --- */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* --- 🛍️ Custom Ads Styling --- */
+.ad-slider {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.ad-slider img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid var(--secondary);
+  box-shadow: 0 4px 10px rgba(30, 41, 59, 0.2);
+}

@@ -1,0 +1,363 @@
+/* 🌈 1. THEME VARIABLES — PEACH + NAVY */
+:root {
+  --primary-peach: #ffb085;
+  --primary-peach-dark: #e68a5c;
+  --primary-navy: #1b2a49;
+  --primary-navy-light: #2d3e63;
+  --accent-yellow: #ffcc70;
+  --danger-red: #ef4444;
+  --background-main: #fffaf7;
+  --background-card: #ffffff;
+  --text-primary: #1b2a49;
+  --text-secondary: #4b5563;
+  --border-light: #e5e7eb;
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+/* 2. PAGE & STATUS */
+.pd-status {
+  text-align: center;
+  padding: 5rem 1rem;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.pd-status.error {
+  color: var(--danger-red);
+}
+
+.pd-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  background-color: var(--background-main);
+}
+
+.pd-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  background-color: var(--background-card);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 3rem;
+  border-top: 4px solid var(--primary-peach);
+}
+
+/* 3. IMAGE GALLERY */
+.pd-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.pd-main-image {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  width: 100%;
+  max-width: 650px;
+  box-shadow: var(--shadow-sm);
+  border: 2px solid var(--primary-peach);
+}
+
+.pd-main-image img {
+  width: 100%;
+  max-height: 550px;
+  object-fit: contain;
+  display: block;
+}
+
+.pd-thumbnails {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+.pd-thumbnail-item {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 3px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s, transform 0.1s;
+  box-shadow: var(--shadow-sm);
+}
+
+.pd-thumbnail-item.selected,
+.pd-thumbnail-item:hover {
+  border-color: var(--primary-navy);
+  transform: scale(1.05);
+  box-shadow: 0 0 0 2px var(--primary-peach), var(--shadow-md);
+}
+
+/* 4. PRODUCT INFO */
+.pd-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.pd-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.pd-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-peach-dark);
+  margin: 0 0 1rem 0;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 1rem;
+}
+
+.pd-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* 5. INPUTS */
+.pd-input-group {
+  margin-bottom: 1.5rem;
+}
+
+.pd-input-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  margin-bottom: 0.5rem;
+}
+
+.pd-input-group select,
+.pd-input-group input[type="number"] {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+  background-color: #fefefe;
+  transition: border-color 0.2s;
+}
+
+.pd-input-group select:focus,
+.pd-input-group input[type="number"]:focus {
+  outline: none;
+  border-color: var(--primary-peach);
+}
+
+.pd-validation-hint {
+  color: var(--danger-red);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+/* STOCK STATUS */
+.pd-stock {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.pd-out-of-stock {
+  color: var(--danger-red);
+}
+
+/* 6. BUTTONS */
+.pd-add-btn {
+  width: 100%;
+  max-width: 300px;
+  padding: 1rem 2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  background-color: var(--primary-navy);
+}
+
+.pd-add-btn:hover:not(:disabled) {
+  background-color: var(--primary-navy-light);
+  transform: translateY(-1px);
+}
+
+.pd-add-btn:disabled {
+  background-color: var(--text-secondary);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* 7. TOAST BANNER */
+.pd-toast-banner {
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 350px;
+  max-width: 90%;
+}
+
+.pd-toast-success {
+  background-color: #ffeadb;
+  color: var(--primary-navy);
+  border: 1px solid var(--primary-peach-dark);
+}
+
+.pd-toast-link {
+  font-weight: 700;
+  color: var(--primary-navy);
+  background-color: #ffd5b5;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.pd-toast-link:hover {
+  background-color: var(--primary-peach-dark);
+  color: #fff;
+}
+
+/* 8. SIMILAR PRODUCTS (Grid Layout for Recommended Products) */
+.pd-similar-section {
+  padding: 1rem 0;
+}
+
+.pd-similar-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.pd-similar-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.pd-similar-item {
+  width: 100%;
+  background-color: var(--background-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  border: 1px solid var(--border-light);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pd-similar-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-peach-dark);
+}
+
+.pd-similar-image {
+  height: 150px;
+  overflow: hidden;
+}
+
+.pd-similar-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pd-similar-info {
+  padding: 0.75rem;
+}
+
+.pd-similar-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  margin: 0 0 0.25rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pd-similar-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-peach-dark);
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+/* 9. RESPONSIVE */
+@media (max-width: 1200px) {
+  .pd-similar-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .pd-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+  .pd-similar-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .pd-page {
+    padding: 1rem 0.5rem;
+  }
+  .pd-card {
+    padding: 1rem;
+  }
+  .pd-name {
+    font-size: 2rem;
+  }
+  .pd-price {
+    font-size: 1.75rem;
+  }
+  .pd-main-image img {
+    max-height: 400px;
+  }
+  .pd-thumbnail-item {
+    width: 60px;
+    height: 60px;
+  }
+  .pd-toast-banner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    top: 15px;
+  }
+  .pd-similar-list {
+    grid-template-columns: 1fr;
+  }
+}

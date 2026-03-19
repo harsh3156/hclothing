@@ -1,0 +1,57 @@
+.auth-container, .profile-container {
+  width: 350px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+  background: #FFF4EE; /* Light Peach */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(26, 31, 113, 0.1);
+}
+
+.auth-container h2, .profile-container h2 {
+  margin-bottom: 15px;
+  color: #1A1F71; /* Navy Blue */
+  font-weight: 600;
+}
+
+.auth-container form input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #FFFFFF;
+  color: #0B132B; /* Dark Navy Text */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.auth-container form input:focus {
+  border-color: #FFB07C; /* Peach Accent */
+  box-shadow: 0 0 5px rgba(255, 176, 124, 0.5);
+  outline: none;
+}
+
+.auth-container form button {
+  width: 100%;
+  padding: 10px;
+  background: #1A1F71; /* Navy Blue Button */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.auth-container form button:hover {
+  background: #FFB07C; /* Peach Hover */
+  color: #0B132B; /* Dark Navy Text */
+  transform: scale(1.03);
+}
+
+.error {
+  color: #E74C3C; /* Professional Red for Errors */
+  margin-bottom: 10px;
+  font-weight: 500;
+}

@@ -1,0 +1,86 @@
+/* 🌸 Admin Panel - Clean & Aligned Sidebar (Peach & Navy Theme) */
+
+.admin-home {
+  display: flex;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 200px;
+  background-color: #0a2647; /* navy */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Sidebar Title */
+.sidebar-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fbbf24; /* peach accent */
+  margin-bottom: 25px;
+  border-bottom: 2px solid #fbbf24;
+  padding-bottom: 8px;
+}
+
+/* Menu Links */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-link {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-link:hover {
+  background-color: #fbbf24;
+  color: #0a2647;
+}
+
+.sidebar-link.active {
+  background-color: #fbbf24;
+  color: #0a2647;
+  font-weight: 600;
+}
+
+/* Logout Button */
+.sidebar-logout {
+  margin-top: auto;
+  color: #f87171; /* soft red */
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.sidebar-logout:hover {
+  background-color: #f87171;
+  color: #fff;
+}
+
+/* Main Content */
+.admin-content {
+  flex: 1;
+  background-color: #fffaf7;
+  padding: 25px;
+  overflow-y: auto;
+  border-top-left-radius: 10px;
+}

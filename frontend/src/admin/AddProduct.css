@@ -1,0 +1,164 @@
+/* --- AddProduct.css (Peach & Navy Theme) --- */
+
+/* General Container Styling */
+.add-product-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fffdfb; /* soft peach background */
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(10, 38, 71, 0.1);
+    border: 1px solid #e0e0e0;
+    color: #0a2647; /* navy text */
+    font-family: "Poppins", sans-serif;
+}
+
+.add-product-container h2 {
+    text-align: center;
+    color: #0a2647; /* deep navy */
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-left: 5px solid #f59e0b; /* peach accent */
+    padding-left: 12px;
+}
+
+/* Form Elements */
+.add-product-container form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #0a2647;
+    font-size: 0.95rem;
+}
+
+.add-product-container input[type="text"],
+.add-product-container input[type="number"],
+.add-product-container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bfc8d4;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #0a2647;
+    background-color: #ffffff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.add-product-container input:focus,
+.add-product-container textarea:focus {
+    border-color: #f59e0b;
+    box-shadow: 0 0 6px rgba(245, 158, 11, 0.3);
+    outline: none;
+}
+
+.add-product-container textarea {
+    resize: vertical;
+    min-height: 100px;
+    background-color: #fff;
+}
+
+/* Alerts */
+.error-message,
+.success-message {
+    padding: 12px;
+    background-color: #fff7ed; /* light peach tint */
+    border: 1px solid #f59e0b;
+    color: #0a2647;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Size/Stock Group */
+.size-group {
+    border: 1px solid #bfc8d4;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background: #fef6f0; /* light peach box */
+}
+
+.size-group > label {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #0a2647;
+    font-weight: 600;
+}
+
+.size-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.size-field {
+    flex: 1;
+    text-align: center;
+}
+
+.size-field label {
+    font-size: 0.85rem;
+    color: #0a2647;
+    margin-bottom: 3px;
+    font-weight: 400;
+}
+
+.size-field input {
+    text-align: center;
+    padding: 8px;
+    background-color: #fff;
+    color: #0a2647;
+}
+
+/* File Input */
+.add-product-container input[type="file"] {
+    border: 1px solid #bfc8d4;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #fdf5ee;
+    color: #0a2647;
+    border-radius: 8px;
+}
+
+/* Submit Button */
+.add-product-container button[type="submit"],
+.add-product-container button[type="button"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    background: linear-gradient(135deg, #0a2647, #193b64);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-product-container button[type="submit"]:hover:not(:disabled) {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    color: #0a2647;
+    transform: translateY(-2px);
+}
+
+.add-product-container button:disabled {
+    background-color: #cbd5e1;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .size-fields {
+        flex-direction: column;
+    }
+    .size-field input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,37 @@
+/* CustomInput.css */
+
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.custom-input label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1A1F71; /* Navy Label */
+  margin-bottom: 8px;
+}
+
+.custom-input input {
+  padding: 10px 14px;
+  border: 1.5px solid #E0E0E0; /* Soft Gray Border */
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #FFF4EE; /* Light Peach Background */
+  color: #0B132B; /* Dark Navy Text */
+}
+
+.custom-input input:focus {
+  border-color: #FFB07C; /* Peach Accent Border */
+  box-shadow: 0 0 6px rgba(255, 176, 124, 0.4); /* Peach Glow */
+  background-color: #FFFFFF; /* White on focus for clarity */
+}
+
+.custom-input input::placeholder {
+  color: #A6A6A6; /* Subtle Gray Placeholder */
+  font-size: 0.95rem;
+}

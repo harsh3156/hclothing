@@ -1,0 +1,81 @@
+/* ======================================================
+   Contact.css — Peach & Navy Edition (No Form)
+   Elegant Clothing Theme
+   ====================================================== */
+
+:root {
+  --navy-dark: #0b1a51;
+  --navy-light: #1e2f76;
+  --peach: #ffb899;
+  --peach-bright: #ffd4c3;
+  --background-light: #fff7f4;
+  --background-card: #ffffff;
+  --border-color: #f0d7ce;
+  --text-dark: #1b1b2f;
+  --text-medium: #5c5f74;
+  --radius-md: 8px;
+  --shadow-md: 0 4px 15px rgba(11, 26, 81, 0.1);
+}
+
+/* --- Container --- */
+.contact-container {
+  max-width: 750px;
+  margin: 50px auto;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(to bottom right, var(--background-card), #fff0e9);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  color: var(--text-dark);
+}
+
+/* --- Heading --- */
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+  border-bottom: 2px solid var(--peach);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* --- Contact Info --- */
+.contact-info {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+.contact-info strong {
+  color: var(--navy-light);
+}
+
+/* --- Map Section --- */
+.contact-map {
+  margin: 25px 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .contact-container {
+    margin: 30px 1rem;
+    padding: 1.5rem;
+  }
+
+  .contact-container h2 {
+    font-size: 1.6rem;
+  }
+}

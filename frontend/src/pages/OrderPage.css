@@ -1,0 +1,314 @@
+/* OrderPage.css - Peach & Navy Theme */
+
+/* 1. Modern CSS Variables */
+:root {
+  --primary-navy: #1b2a4e;
+  --primary-navy-light: #324a7a;
+  --primary-peach: #ffb6a0;
+  --primary-peach-dark: #ff9678;
+  --secondary-cream: #fff4f0;
+  --background-main: #faf9f9;
+  --background-card: #ffffff;
+  --text-primary: #1b1b1b;
+  --text-secondary: #555;
+  --text-tertiary: #888;
+  --border-light: #e6e6e6;
+  --border-medium: #ccc;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 6px 10px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 18px rgba(0,0,0,0.1);
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+/* 2. Base Styles */
+.orders-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  background: var(--background-main);
+  min-height: 100vh;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+.orders-page h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-navy), var(--primary-peach-dark));
+  background-clip: text;            /* ✅ Standard property */
+  -webkit-background-clip: text;    /* ✅ Vendor-prefixed for Safari */
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+
+/* 3. Order Cards */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-card {
+  background: var(--background-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.order-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary-peach), var(--primary-navy));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.order-card:hover::before {
+  opacity: 1;
+}
+
+/* 4. Header */
+.order-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.order-header b {
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.order-total {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  justify-self: end;
+}
+
+/* 5. Status Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.pending {
+  background: #fff2e9;
+  color: var(--primary-peach-dark);
+  border: 1px solid #ffd6c7;
+}
+
+.status-badge.delivered {
+  background: #eaf0ff;
+  color: var(--primary-navy);
+  border: 1px solid #c7d4ff;
+}
+
+.status-badge.canceled {
+  background: #fdeaea;
+  color: #d33c3c;
+  border: 1px solid #f8c9c9;
+}
+
+/* 6. Items */
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--secondary-cream);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.order-item:hover {
+  border-color: var(--primary-peach);
+  background: #fff;
+}
+
+.order-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.item-details h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+}
+
+.item-details p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* 7. Buttons */
+.cancel-btn {
+  background: linear-gradient(135deg, #d33c3c, #a92323);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cancel-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #a92323, #7f1818);
+}
+
+/* Feedback */
+.feedback-section {
+  background: linear-gradient(135deg, #fff4f0, #ffe7e0);
+  border-left: 4px solid var(--primary-peach-dark);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.feedback-submit {
+  background: linear-gradient(135deg, var(--primary-navy), var(--primary-peach-dark));
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.feedback-submit:hover {
+  background: linear-gradient(135deg, var(--primary-peach-dark), var(--primary-navy-light));
+  transform: translateY(-2px);
+}
+
+/* Stars */
+.star {
+  color: var(--primary-navy-light);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.star.active,
+.star:hover {
+  color: var(--primary-peach-dark);
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.order-card {
+  animation: slideIn 0.4s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .order-item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .order-header {
+    grid-template-columns: 1fr;
+  }
+
+  .order-total {
+    justify-self: start;
+  }
+}
+/* 8. Delivered Order Actions - Reorder, Invoice, Track */
+.order-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.reorder-btn,
+.invoice-btn,
+.track-btn {
+  background: linear-gradient(135deg, var(--primary-navy), var(--primary-peach-dark));
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-transform: uppercase;
+}
+
+.reorder-btn:hover,
+.invoice-btn:hover,
+.track-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--primary-peach-dark), var(--primary-navy-light));
+}
+
+/* 9. Feedback + Action Container */
+.order-actions > .feedback-section {
+  flex: 1 1 100%;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .order-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .reorder-btn,
+  .invoice-btn,
+  .track-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

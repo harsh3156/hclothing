@@ -1,0 +1,219 @@
+/* ======================================================
+   Reports.css — Peach & Navy Dashboard Edition
+   ====================================================== */
+
+:root {
+  --navy-dark: #0b1a51;
+  --navy-light: #1e2f76;
+  --peach: #ffb899;
+  --peach-bright: #ffd4c3;
+  --orange: #ff8c42;
+  --background: #f9fafc;
+  --white: #ffffff;
+  --text-dark: #1b1b2f;
+  --text-medium: #5c5f74;
+  --border-color: #e6e6e6;
+  --radius-md: 10px;
+  --shadow-md: 0 4px 12px rgba(11, 26, 81, 0.1);
+}
+
+/* --- Main Container --- */
+.reports-container {
+  padding: 40px 60px;
+  background: linear-gradient(to bottom right, #ffffff, #fff5ef);
+  min-height: 100vh;
+  color: var(--text-dark);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+/* --- Header --- */
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.reports-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--navy-dark);
+  letter-spacing: 0.5px;
+}
+
+.download-btn {
+  background: linear-gradient(90deg, var(--navy-dark), var(--navy-light));
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.download-btn:hover {
+  background: linear-gradient(90deg, var(--navy-light), var(--peach));
+  transform: translateY(-2px);
+}
+
+/* --- Summary Section --- */
+.summary-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.summary-card {
+  flex: 1;
+  border-radius: var(--radius-md);
+  padding: 25px 20px;
+  text-align: center;
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(11, 26, 81, 0.15);
+}
+
+.summary-card h3 {
+  font-size: 1.2rem;
+  color: var(--navy-dark);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.summary-card p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* --- Accent Borders --- */
+.summary-card.peach {
+  border-top: 5px solid var(--peach);
+}
+
+.summary-card.navy {
+  border-top: 5px solid var(--navy-dark);
+}
+
+.summary-card.orange {
+  border-top: 5px solid var(--orange);
+}
+
+/* --- Chart Section --- */
+.chart-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.chart-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 25px;
+  border: 1px solid var(--border-color);
+  transition: 0.3s ease;
+}
+
+.chart-card:hover {
+  box-shadow: 0 6px 18px rgba(11, 26, 81, 0.12);
+}
+
+.chart-card h3 {
+  color: var(--navy-dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* --- Table Section --- */
+.table-section {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 25px;
+  border: 1px solid var(--border-color);
+  margin-top: 40px;
+}
+
+.table-section h3 {
+  color: var(--navy-dark);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.report-table th {
+  background-color: var(--navy-dark);
+  color: white;
+  font-weight: 600;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.report-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-dark);
+}
+
+.report-table tr:hover {
+  background-color: #fff5ef;
+}
+
+/* --- Error / Loading --- */
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .summary-section {
+    flex-wrap: wrap;
+  }
+
+  .summary-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .reports-container {
+    padding: 20px;
+  }
+
+  .summary-section {
+    flex-direction: column;
+  }
+
+  .summary-card {
+    flex: 1 1 100%;
+  }
+
+  .reports-header h2 {
+    font-size: 22px;
+  }
+
+  .download-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

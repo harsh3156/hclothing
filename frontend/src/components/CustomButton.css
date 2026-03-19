@@ -1,0 +1,37 @@
+/* CustomButton.css */
+
+.custom-button {
+  background: linear-gradient(135deg, #1A1F71, #0B132B); /* Navy Gradient */
+  color: #FFF4EE; /* Light Peach Text */
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* space for icons if added */
+}
+
+.custom-button:hover {
+  background: linear-gradient(135deg, #FFB07C, #FFCBA4); /* Peach Hover Gradient */
+  color: #0B132B; /* Dark Navy Text for contrast */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 176, 124, 0.4);
+}
+
+.custom-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(255, 176, 124, 0.3);
+}
+
+.custom-button:disabled {
+  background: #E0E0E0; /* Light Gray when disabled */
+  color: #A6A6A6;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.7;
+}

@@ -1,0 +1,221 @@
+/* 🌸 View Products Page (Peach & Navy Theme) */
+.view-products {
+  padding: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  background-color: #fffaf7; /* soft peach background */
+  border-radius: 10px;
+}
+
+/* --- Header --- */
+.view-products h2 {
+  color: #1e3a5f; /* navy */
+  border-bottom: 3px solid #f9b195; /* peach underline */
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* --- Search + Filter + Download Controls --- */
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* 🔍 Search Box */
+.search-input {
+  padding: 10px 15px;
+  border: 2px solid #f9b195;
+  border-radius: 6px;
+  width: 350px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #1e3a5f;
+  box-shadow: 0 0 5px rgba(30, 58, 95, 0.3);
+  outline: none;
+}
+
+/* --- Dropdown Filters --- */
+.filter-select {
+  padding: 10px 15px;
+  border: 2px solid #f9b195;
+  border-radius: 6px;
+  background-color: #fffaf7;
+  color: #1e3a5f;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+  border-color: #1e3a5f;
+  outline: none;
+  box-shadow: 0 0 5px rgba(30, 58, 95, 0.3);
+}
+
+/* 📥 Download Button */
+.download-btn {
+  background: linear-gradient(135deg, #1e3a5f, #27496d);
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: linear-gradient(135deg, #f9b195, #f58a5c);
+  color: #1e3a5f;
+}
+
+/* --- Product Count --- */
+.product-count {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* --- Table --- */
+.view-products table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.view-products th,
+.view-products td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #f1d1b5;
+  font-size: 15px;
+  color: #333;
+}
+
+.view-products thead th {
+  background-color: #1e3a5f; /* navy header */
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 🖱 Hover Effect */
+.view-products tbody tr:hover {
+  background-color: #fff0eb; /* light peach hover */
+  transition: background-color 0.3s;
+}
+
+/* 🖼 Product Image */
+.view-products td img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.view-products td img:hover {
+  transform: scale(1.05);
+}
+
+/* 🧾 Action Buttons Layout */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* space between buttons */
+}
+
+/* 🎨 Button Styling */
+.action-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* ✏️ Edit Button */
+.edit-btn {
+  background-color: #00416a; /* navy */
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0062a3;
+}
+
+/* 🗑️ Delete Button */
+.delete-btn {
+  background-color: #ff6b6b; /* soft red */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #ff5252;
+}
+
+/* 🕳 Empty Table Message */
+.view-products td[colspan="6"] {
+  text-align: center;
+  color: #666;
+  padding: 25px;
+  font-style: italic;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .filter-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-input,
+  .download-btn {
+    width: 100%;
+  }
+
+  .view-products table,
+  .view-products thead {
+    display: block;
+  }
+
+  .view-products tr {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .view-products td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #f1d1b5;
+  }
+
+  .view-products th {
+    display: none;
+  }
+
+  .action-buttons {
+    justify-content: flex-end;
+  }
+}

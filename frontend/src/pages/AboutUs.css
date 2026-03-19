@@ -1,0 +1,80 @@
+/* AboutUs.css — Peach & Navy Edition 👗 */
+
+:root {
+  --primary: #FF6B6B;     /* Peach Coral */
+  --secondary: #1E293B;   /* Navy Blue */
+  --background-card: #FFF7ED; /* Creamy Background */
+  --text-primary: #0F172A; /* Deep Navy */
+  --text-secondary: #374151; /* Softer Navy Gray */
+  --accent: #FBBF24;      /* Soft Yellow */
+  --border-light: #E2E8F0;
+  --radius-lg: 16px;
+  --radius-sm: 6px;
+  --shadow-md: 0 4px 12px rgba(30, 41, 59, 0.15);
+}
+
+/* 🌸 About Container */
+.about-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, var(--background-card), #ffece8);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  color: var(--text-primary);
+  font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(30, 41, 59, 0.2);
+}
+
+/* 🧡 Title Styling */
+.about-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary);
+  text-shadow: 1px 1px 3px rgba(30, 41, 59, 0.2);
+  border-bottom: 3px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* 📝 Paragraph Styling */
+.about-container p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* ✨ Highlight Bar */
+.about-highlight {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  height: 4px;
+  width: 100px;
+  margin: 1rem auto 2rem;
+  border-radius: var(--radius-sm);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1.25rem;
+    margin: 40px 1rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-container p {
+    font-size: 0.95rem;
+  }
+}

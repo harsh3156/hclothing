@@ -1,0 +1,238 @@
+
+:root {
+  --navy-dark: #0b1a51;
+  --navy-light: #1e2f76;
+  --peach: #ffb899;
+  --peach-bright: #ffd4c3;
+  --background-main: #fff7f4;
+  --background-card: #ffffff;
+  --text-primary: #0b1a51;
+  --text-secondary: #4c5472;
+  --border-light: #f0d7ce;
+  --shadow-sm: 0 2px 4px rgba(11, 26, 81, 0.1);
+  --shadow-md: 0 6px 20px rgba(11, 26, 81, 0.15);
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+/* 2. Main Container */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(to bottom right, #fff7f4, #ffffff);
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+/* Section Title */
+.products-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin: 3rem 0 1.5rem 0;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(11, 26, 81, 0.15);
+  border-bottom: 2px solid var(--peach);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* 3. Loading, Error, Empty */
+.ad-loading, .ad-error, .ad-empty,
+.product-loading, .product-error, .product-empty {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: var(--background-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* 4. Advertisement Section */
+.ad-section {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.main-ad-slider .slick-slide {
+  padding: 0 5px;
+}
+
+.ad-slide-item img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--peach);
+}
+
+/* react-slick Arrows */
+.slick-prev:before,
+.slick-next:before {
+  color: var(--peach) !important;
+  font-size: 2rem !important;
+}
+
+/* react-slick Dots */
+.slick-dots li button:before {
+  color: var(--navy-dark) !important;
+  font-size: 10px !important;
+  opacity: 0.4;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: var(--peach) !important;
+}
+
+/* 5. Product Grid */
+.main-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.main-product-card {
+  background: linear-gradient(to bottom, #ffffff, #fff2eb);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(11, 26, 81, 0.25);
+  border-color: var(--peach);
+}
+
+.main-product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--peach);
+}
+
+/* 6. Product Details */
+.card-details {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-details h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--navy-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+/* 7. Price */
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--peach);
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+/* 8. Rating */
+.product-stars {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.product-stars .star {
+  color: var(--border-light);
+  font-size: 1.1rem;
+}
+
+.product-stars .star.active {
+  color: var(--peach);
+}
+
+.product-stars .star.half {
+  background: linear-gradient(to right, var(--peach) 50%, var(--border-light) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.product-stars .rating-value {
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* 9. View More Button */
+.view-more-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 1rem 0;
+}
+
+.view-more-btn {
+  background: linear-gradient(90deg, var(--navy-dark), var(--navy-light));
+  color: #fff;
+  border: 2px solid var(--peach);
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.view-more-btn:hover {
+  background: var(--peach);
+  color: var(--navy-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 184, 153, 0.4);
+}
+
+/* 10. Responsiveness */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1rem 0.5rem;
+  }
+  .products-section h2 {
+    font-size: 1.75rem;
+  }
+  .main-product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+  }
+  .main-product-card img {
+    height: 160px;
+  }
+  .ad-slide-item img {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-product-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-product-card img {
+    height: 240px;
+  }
+  .card-details h3 {
+    font-size: 1.05rem;
+  }
+}
