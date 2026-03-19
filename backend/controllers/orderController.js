@@ -2,6 +2,7 @@ import Order from "../models/Order.js";
 import Cart from "../models/Cart.js";
 import Product from "../models/Product.js";
 import { sendOrderConfirmationEmail } from "../utils/mailService.js";
+import { generateTrackingId } from "../utils/trackingUtils.js";
 
 // --- Helper for Status Restoration ---
 const restoreStock = async (items) => {
@@ -80,6 +81,7 @@ export const createOrder = async (req, res) => {
       recipientEmail,
       recipientPhone,
       paymentMethod,
+      trackingId: generateTrackingId(),
       status: paymentMethod === "COD" ? "Confirmed" : "Pending",
     });
 
@@ -102,6 +104,7 @@ export const createOrder = async (req, res) => {
           phone: recipientPhone || ""
         },
         paymentMethod: "Cash on Delivery",
+        trackingId: order.trackingId,
       });
     }
 
@@ -109,6 +112,28 @@ export const createOrder = async (req, res) => {
   } catch (error) {
     console.error("Create order error:", error);
     res.status(500).json({ message: "Failed to create order", error: error.message });
+  }
+};
+
+// 🔍 Get order by Tracking ID
+export const getOrderByTrackingId = async (req, res) => {
+  try {
+    const { trackingId } = req.params;
+    const order = await Order.findOne({ trackingId })
+      .populate({
+        path: "items.product",
+        select: "name price image",
+      })
+      .populate("user", "name email");
+
+    if (!order) {
+      return res.status(404).json({ message: "Order not found with this tracking ID" });
+    }
+
+    res.status(200).json(order);
+  } catch (error) {
+    console.error("Get order by tracking ID error:", error);
+    res.status(500).json({ message: "Failed to fetch order", error: error.message });
   }
 };
 
@@ -150,7 +175,7 @@ export const updateOrderStatus = async (req, res) => {
     const { id } = req.params;
     const { status } = req.body;
 
-    const validStatuses = ["Pending", "Confirmed", "Shipped", "Delivered", "Canceled"];
+    const validStatuses = ["Pending", "Confirmed", "Shipped", "Out for Delivery", "Delivered", "Canceled"];
 
     if (!validStatuses.includes(status)) {
       return res.status(400).json({ message: "Invalid order status" });

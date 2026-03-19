@@ -28,6 +28,7 @@ const orderSchema = new mongoose.Schema(
         ],
         totalAmount: { type: Number, required: true },
         status: { type: String, default: "Pending" },
+        trackingId: { type: String, unique: true },
 
         // 🚚 Shipping & Recipient Details
         recipientName: { type: String },

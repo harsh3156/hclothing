@@ -20,7 +20,7 @@ const AdminOrders = () => {
   const [fromDate, setFromDate] = useState("");
   const [toDate, setToDate] = useState("");
 
-  const updateableStatusOptions = ["Pending", "Confirmed", "Shipped", "Delivered"];
+  const updateableStatusOptions = ["Pending", "Confirmed", "Shipped", "Out for Delivery", "Delivered"];
 
   const fetchOrders = useCallback(async () => {
     if (!user) return;
@@ -203,6 +203,7 @@ const AdminOrders = () => {
           <thead>
             <tr>
               <th>Order ID</th>
+              <th>Tracking ID</th>
               <th>User Details</th>
               <th>Status</th>
               <th>Total Amount</th>
@@ -214,6 +215,7 @@ const AdminOrders = () => {
             {filteredOrders.map((order) => (
               <tr key={order._id}>
                 <td>{order._id}</td>
+                <td>{order.trackingId || "N/A"}</td>
                 <td>{formatUserDisplay(order)}</td>
                 <td className={`order-status-cell status-${order.status.toLowerCase()}`}>
                   {order.status}

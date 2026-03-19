@@ -92,6 +92,11 @@ const OrderPage = () => {
           <div key={order._id} className="order-card">
             <div className="order-header">
               <p><b>Order ID:</b> {order._id}</p>
+              {order.trackingId && (
+                <p>
+                  <b>Tracking ID:</b> <a href={`/track/${order.trackingId}`} className="track-link">{order.trackingId}</a>
+                </p>
+              )}
               <p>
                 <b>Status:</b>{" "}
                 <span

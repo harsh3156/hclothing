@@ -74,6 +74,7 @@ export const verifyPayment = async (req, res) => {
           phone: order.recipientPhone || ""
         },
         paymentMethod: "Online Payment (Razorpay)",
+        trackingId: order.trackingId,
       });
       
       res.status(200).json({ success: true, message: "Payment verified successfully." });

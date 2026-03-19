@@ -6,7 +6,8 @@ import {
   getAllOrders,
   updateOrderStatus,
   cancelOrder,
-  submitOrderFeedback, // ⭐ new controller
+  submitOrderFeedback,
+  getOrderByTrackingId,
 } from "../controllers/orderController.js";
 
 const router = express.Router();
@@ -14,6 +15,7 @@ const router = express.Router();
 // 🧾 User routes
 router.post("/", protect, createOrder);
 router.get("/myorders", protect, getUserOrders);
+router.get("/track/:trackingId", getOrderByTrackingId); // New public or protected route
 router.put("/cancel/:id", protect, cancelOrder);
 
 // ⭐ New: Submit feedback for delivered orders

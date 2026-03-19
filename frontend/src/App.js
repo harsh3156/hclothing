@@ -18,6 +18,7 @@ import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import OrderPage from "./pages/OrderPage";
 import Checkout from "./pages/Checkout";
+import TrackOrder from "./pages/TrackOrder";
 
 // Admin
 import AdminHome from "./admin/AdminHome";
@@ -103,6 +104,8 @@ function App() {
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/track" element={<TrackOrder />} />
+        <Route path="/track/:trackingId" element={<TrackOrder />} />
 
         {/* ========== Protected User Routes ========== */}
         {/* ✅ Edge Case: Admin redirects to /admin/view-products */}

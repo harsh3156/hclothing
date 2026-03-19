@@ -47,8 +47,13 @@ export const sendOrderConfirmationEmail = async (email, orderDetails) => {
 
                 <div style="background-color: #f9f9f9; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
                     <p><strong>Order ID:</strong> #${orderId}</p>
+                    <p><strong>Tracking ID:</strong> <span style="color: #007bff; font-weight: bold;">${orderDetails.trackingId}</span></p>
                     <p><strong>Payment Method:</strong> ${paymentMethod || "COD"}</p>
                     ${estimatedDelivery ? `<p><strong>Estimated Delivery:</strong> ${estimatedDelivery}</p>` : ""}
+                </div>
+
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <p style="font-size: 14px; color: #666;">Use your Tracking ID to monitor your order progress on our website.</p>
                 </div>
 
                 <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">

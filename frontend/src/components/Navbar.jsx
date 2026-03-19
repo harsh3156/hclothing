@@ -25,6 +25,7 @@ const Navbar = () => {
             <li><Link to="/products">Products</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
             <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/track">Track Order</Link></li>
             <li><Link to="/login">Login</Link></li>
             <li><Link to="/register">Register</Link></li>
           </ul>
@@ -37,6 +38,7 @@ const Navbar = () => {
             <li><Link to="/products">Products</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
             <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/track">Track Order</Link></li>
             <li className="dropdown">
               <span>Profile ▾</span>
               <ul className="dropdown-menu">

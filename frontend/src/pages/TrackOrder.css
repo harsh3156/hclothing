@@ -1,0 +1,192 @@
+.track-order-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.track-order-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-form input:focus {
+    border-color: #007bff;
+}
+
+.search-form button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+.order-status-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+.order-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.order-header h2 {
+    margin: 0 0 10px 0;
+}
+
+.status-pending { color: #f39c12; }
+.status-confirmed { color: #27ae60; }
+.status-shipped { color: #2980b9; }
+.status-out-for-delivery { color: #8e44ad; }
+.status-delivered { color: #2ecc71; }
+
+/* Timeline UI */
+.tracking-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+.tracking-timeline::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    height: 4px;
+    background: #e0e0e0;
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    flex: 1;
+}
+
+.timeline-marker {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: 4px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-weight: bold;
+    color: #999;
+    transition: all 0.3s;
+}
+
+.timeline-item.active .timeline-marker {
+    border-color: #2ecc71;
+    color: #2ecc71;
+}
+
+.timeline-item.current .timeline-marker {
+    background: #2ecc71;
+    color: white;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+}
+
+.timeline-item.active .status-label {
+    color: #333;
+    font-weight: bold;
+}
+
+.status-label {
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+}
+
+.status-date {
+    font-size: 10px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.order-details-summary {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.items-mini-list {
+    margin-bottom: 15px;
+}
+
+.mini-item {
+    padding: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.total-price {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    text-align: right;
+    margin: 0;
+}
+
+.error-message {
+    background: #fff5f5;
+    color: #c53030;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .tracking-timeline {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .tracking-timeline::before {
+        display: none;
+    }
+    .timeline-item {
+        display: flex;
+        gap: 20px;
+        text-align: left;
+    }
+    .timeline-marker {
+        margin: 0;
+    }
+}
