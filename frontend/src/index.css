@@ -1,10 +1,15 @@
 /* 🌸 Global Peach & Navy Theme */
 :root {
-  --primary: #FF6B6B;     /* Peach Coral */
-  --secondary: #1E293B;   /* Navy Blue */
-  --background: #FFF7ED;  /* Creamy White */
-  --text: #0F172A;        /* Dark Navy */
-  --accent: #FBBF24;      /* Soft Yellow */
+  --primary: #FF6B6B;
+  /* Peach Coral */
+  --secondary: #1E293B;
+  /* Navy Blue */
+  --background: #FFF7ED;
+  /* Creamy White */
+  --text: #0F172A;
+  /* Dark Navy */
+  --accent: #FBBF24;
+  /* Soft Yellow */
 }
 
 /* 🌿 Base Styling */
@@ -48,15 +53,36 @@ button:hover {
 
 /* 🛍️ Custom Ads Styling */
 .ad-slider {
-  width: 100%;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
-.ad-slider img {
+.slick-slider,
+.slick-list,
+.slick-track {
+  height: 300px !important;
+}
+
+.slick-slide {
+  height: 300px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔥 MAIN LINE */
+.slick-slide img {
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 12px;
-  border: 3px solid var(--secondary);
-  box-shadow: 0 4px 10px rgba(30, 41, 59, 0.2);
+  transition: transform 0.5s ease;
+  display: block;
+  object-position: right center;
+}
+
+.slick-slide img {
+  transition: transform 0.5s ease;
+}
+
+.slick-slide:hover img {
+  transform: scale(1.6);
 }

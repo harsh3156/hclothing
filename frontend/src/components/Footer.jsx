@@ -46,7 +46,7 @@ const Footer = () => {
 
       {/* Copyright Bar */}
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} My E-commerce. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} My H Clothings. All Rights Reserved.</p>
       </div>
     </footer>
   );

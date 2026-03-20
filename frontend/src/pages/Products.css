@@ -19,7 +19,7 @@
 
 /* 🧭 Left Sidebar */
 .shop-filters {
-  width: 240px;
+  width: 220px;
   background-color: var(--primary-navy);
   color: #fff;
   padding: 25px 20px;
@@ -35,7 +35,7 @@
 }
 
 .shop-search-box {
-  width: 100%;
+  width: 90%;
   padding: 8px 12px;
   border: none;
   border-radius: 8px;
@@ -76,7 +76,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-left: 5px solid var(--primary-peach);
+  /* border-left: 5px solid var(--primary-peach); */
   padding-left: 12px;
   margin-bottom: 20px;
 }

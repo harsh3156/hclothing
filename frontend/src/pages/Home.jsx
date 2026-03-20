@@ -22,7 +22,7 @@ const RatingStars = ({ rating, totalReviews = 0 }) => {
       {[...Array(emptyStars)].map((_, i) => (
         <span key={`empty-${i}`} className="star">☆</span>
       ))}
-      <span className="rating-value"> 
+      <span className="rating-value">
         ({normalizedRating.toFixed(1)}{totalReviews > 0 ? ` / ${totalReviews}` : ''})
       </span>
     </div>
@@ -32,12 +32,12 @@ const RatingStars = ({ rating, totalReviews = 0 }) => {
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [ads, setAds] = useState([]);
-  
+
   const [productLoading, setProductLoading] = useState(true);
   const [adLoading, setAdLoading] = useState(true);
   const [productError, setProductError] = useState(null);
   const [adError, setAdError] = useState(null);
-  
+
   const navigate = useNavigate();
   useContext(AuthContext);
 
@@ -86,11 +86,12 @@ const Home = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2000,
+    pauseOnHover: false,
     arrows: true,
   };
 
