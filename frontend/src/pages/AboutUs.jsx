@@ -12,7 +12,7 @@ const AboutUs = () => {
       </p>
       <p>
         Our team is passionate about technology, fashion, and all things in between. 
-        We strive to make shopping easy, fast, and enjoyable for everyone.
+        We strive to make shopping easy, fast, and enjoyable for everyone us.
       </p>
     </div>
   );
